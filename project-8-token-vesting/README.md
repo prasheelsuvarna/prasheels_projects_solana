@@ -5,7 +5,6 @@
 
 This repository contains a Solana smart contract written in Rust using the Anchor framework for managing token vesting schedules. The program allows for the creation of vesting accounts for companies and employees, enabling token distributions based on predefined vesting schedules.
 
-This project is generated with the [create-solana-dapp](https://github.com/solana-developers/create-solana-dapp) generator.
 
 ## Features
 

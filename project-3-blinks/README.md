@@ -1,17 +1,21 @@
-# Project 3: Integrating Blinks
+# Solana Voting DApp
 
-[Blinks and Actions]() bring the blockchain to any website that can handle a hyperlink. Throughout this project, we will learn how to integrate Blinks into a website and use them to interact with a Solana smart contract.
+## Overview
+A decentralized voting application built on the **Solana blockchain** using the **Anchor framework**. It allows users to create polls, add candidates, register voters, and securely cast votes.
 
-## Resources
+## Features
+- 🗳️ **Create Polls**: Initialize new voting polls.
+- 👤 **Add Candidates**: Register candidates for a poll.
+- ✅ **Voter Registration**: Users must register before voting.
+- 🔐 **Secure Voting**: Each registered voter can cast one vote per poll.
+- 🏆 **Winner Calculation**: Determines the candidate with the highest votes.
 
-- [Blinks Documentation](https://solana.com/docs/advanced/actions)
-- [Blinks Tester](https://dial.to)
+## Installation
+### Prerequisites
+- Install **Rust**, **Solana CLI**, and **Anchor**:
+  ```sh
+  cargo install --git https://github.com/coral-xyz/anchor anchor-cli --locked
 
-## Running This Project
-
-We highly recommend creating your own github repository and building along with the video. This will help you learn the most and give you a reference to look back on later.
-
-If you want to check the final result of the project, you can clone this repository and run the following commands:
 
 ```
 npm i
@@ -22,4 +26,3 @@ cd ..
 npm run dev
 ```
 
-You should be able to view the project at [http://localhost:3000](http://localhost:3000) and interact with the blinks at [dial.to](https://dial.to/?action=solana-action:http://localhost:3000/api/vote)

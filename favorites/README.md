@@ -1,30 +1,29 @@
-# Project 1: Favorites Application
+# 🏆 Favorites DApp - Solana Program (Anchor Framework)
 
-This is a basic Anchor app using PDAs to store data for a user, and Anchor's account checks to ensure each user is only allowed to modify their own data.
+This is a **Solana smart contract** built using the **Anchor framework**. The program allows users to store, update, and retrieve their **favorite number, color, and hobbies** securely on the blockchain.  
 
-It's used by the [https://github.com/solana-developers/professional-education](Solana Professional Education) course.
+## 🚀 Features
+- ✅ **Set Favorites**: Store favorite number, color, and hobbies.
+- ✅ **Update Favorites**: Modify existing favorites.
+- ✅ **Get Favorites**: Fetch stored favorite details.
+- ✅ **Validation**: Ensures correct input (number range: `1-100`, max hobbies: `5`).
+- ✅ **Custom Errors**: Improves error handling with `CustomError`.
 
-We recommend creating a separate github repository for each project and commiting your code as you follow along the video.
+---
 
-[![Favorites Program](https://ik.imagekit.io/mkpjlhtny/solpg_button_zWM8WlPKs.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1662621556513)](https://beta.solpg.io/67060f00cffcf4b13384d3dc)
+## 🛠️ Installation
 
-## Resources
+### 1️⃣ Prerequisites
+- Install **Rust & Cargo**: [Rustup](https://rustup.rs/)
+- Install **Solana CLI**:  
+  ```sh
+  sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
 
-- [Anchor Documentation](https://www.anchor-lang.com/)
-- [Solana Documentation](https://solana.com/docs)
-- [Solana Playground](https://beta.solpg.io)
-- [Rust Documentation](https://doc.rust-lang.org/book/)
+cargo install --git https://github.com/coral-xyz/anchor avm --locked
+avm install latest
+avm use latest
+  
 
-## Running This Project
-
-We highly recommend [creating your own github repository](https://github.com/new) and building along with the video. This will help you learn the most and give you a reference to look back on later.
-
-If you want to check the final result of the project, you can clone this repository and run the following commands:
-
-```
-npm i
-anchor build
-anchor test
-```
-
-You should see the tests pass once completed.
+  anchor build
+solana config set --url devnet
+anchor deploy

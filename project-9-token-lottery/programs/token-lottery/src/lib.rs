@@ -81,8 +81,8 @@ pub mod token_lottery {
                 CreateMetadataAccountsV3 {
                     metadata: ctx.accounts.metadata.to_account_info(),
                     mint: ctx.accounts.collection_mint.to_account_info(),
-                    mint_authority: ctx.accounts.collection_mint.to_account_info(), // use pda mint address as mint authority
-                    update_authority: ctx.accounts.collection_mint.to_account_info(), // use pda mint as update authority
+                    mint_authority: ctx.accounts.collection_mint.to_account_info(),
+                    update_authority: ctx.accounts.collection_mint.to_account_info(), 
                     payer: ctx.accounts.payer.to_account_info(),
                     system_program: ctx.accounts.system_program.to_account_info(),
                     rent: ctx.accounts.rent.to_account_info(),
@@ -104,7 +104,7 @@ pub mod token_lottery {
             },
             true,
             true,
-            Some(CollectionDetails::V1 { size: 0 }), // set as collection nft
+            Some(CollectionDetails::V1 { size: 0 }), 
         )?;
 
         msg!("Creating Master edition accounts");
@@ -229,7 +229,7 @@ pub mod token_lottery {
             Some(0),
         )?;
 
-        // verify nft as part of collection
+        
         set_and_verify_sized_collection_item(
             CpiContext::new_with_signer(
                 ctx.accounts.token_metadata_program.to_account_info(),
@@ -325,7 +325,7 @@ pub mod token_lottery {
         msg!("Ticket name: {}", ticket_name);
         msg!("Metdata name: {}", metadata_name);
 
-        // Check if the winner has the winning ticket
+        
         require!(metadata_name == ticket_name, ErrorCode::IncorrectTicket);
         require!(ctx.accounts.destination.amount > 0, ErrorCode::IncorrectTicket);
 

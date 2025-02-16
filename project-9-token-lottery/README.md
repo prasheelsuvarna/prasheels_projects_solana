@@ -1,11 +1,38 @@
-# Creating a Token Lottery Program
+# Solana Token DApp
 
-In this project, you will learn how to create a token lottery program on the Solana blockchain.
+A decentralized token management application built on Solana using Anchor and Next.js.
 
-[You can follow along with the video to create the token lottery](https://www.youtube.com/watch?v=amAq-WHAFs8&t=30677s)
+## Features
+- **Mint Tokens**: Create new tokens with admin authorization.
+- **Burn Tokens**: Destroy tokens securely.
+- **Transfer Tokens**: Send tokens between users.
+- **Balance Check**: View user token balances.
+- **Wallet Integration**: Connect Phantom Wallet for authentication.
+- **Dashboard & UI**: User-friendly interface with transaction details.
 
-## Resources
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-repo/solana-token-dapp.git
+   cd solana-token-dapp
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
+4. Deploy the Solana program:
+   ```sh
+   anchor deploy
+   ```
 
-- [Solana Documentation](https://solana.com/docs)
-- [Switchboard Documentation](https://docs.switchboard.xyz/docs/switchboard/switchboard-randomness)
-- [Switchboard SDK](https://github.com/switchboard-xyz/sb-on-demand-examples/tree/main/sb-randomness-on-demand)
+## Technologies Used
+- **Solana** (Anchor Framework, SPL Tokens)
+- **Rust** (Smart contract development)
+- **Next.js & Tailwind CSS** (Frontend UI)
+- **Web3.js & Phantom Wallet** (Wallet authentication)
+
+
